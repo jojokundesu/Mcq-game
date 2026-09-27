@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0d9488">
+<title>MediQuiz — Brand ↔ Salt</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+<!-- splash -->
+<div id="splash">
+  <div class="splash-logo">
+    <svg viewBox="0 0 64 64" width="76" height="76" aria-hidden="true">
+      <defs><linearGradient id="pg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0d9488"/>
+      </linearGradient></defs>
+      <path d="M22 6h20a4 4 0 0 1 4 4v12l8 20A12 12 0 0 1 43 58H21a12 12 0 0 1-11-16l8-20V10a4 4 0 0 1 4-4z" fill="none" stroke="url(#pg)" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="30" cy="40" r="4" fill="#2dd4bf"/><circle cx="37.5" cy="48" r="3" fill="#2dd4bf" opacity=".7"/>
+      <path d="M46 16q10 0 10 10t-10 10-10-10 10-10zm0 6v4m0 4h.01" stroke="#5eead4" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="splash-name">MediQuiz</div>
+  <div class="splash-sub">brand ↔ salt, at your fingertips</div>
+  <div class="splash-bar"><i></i></div>
+  <div class="splash-err hide" id="splashErr">Couldn't load the medicine database — please check your connection and retry.
+    <button class="btn ghost" onclick="location.reload()">Retry</button></div>
+</div>
+
+<!-- rotate nudge -->
+<div id="rotateNudge" class="hidden">
+  <div class="rotate-card">
+    <div class="rotate-phone"><i></i></div>
+    <h3>Best in portrait</h3>
+    <p>MediQuiz is built for your phone held upright. Please rotate back.</p>
+    <div class="row">
+      <button class="btn primary" id="rotateOk">Got it</button>
+      <button class="btn ghost" data-minimize="rotateNudge" title="Minimise" aria-label="Minimise">—</button>
+    </div>
+  </div>
+</div>
+
+<main id="app" class="hidden">
+
+  <header class="topbar">
+    <div class="brand-chip">
+      <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><path d="M22 6h20a4 4 0 0 1 4 4v12l8 20A12 12 0 0 1 43 58H21a12 12 0 0 1-11-16l8-20V10a4 4 0 0 1 4-4z" fill="none" stroke="#2dd4bf" stroke-width="4"/><circle cx="30" cy="40" r="4" fill="#2dd4bf"/></svg>
+      <span>MediQuiz</span>
+    </div>
+    <div class="topbar-right">
+      <span id="onlineDot" class="dot" title="online status"></span>
+      <button id="bellBtn" class="icon-btn" title="Install / tips" aria-label="install or tips">⬇️</button>
+    </div>
+  </header>
+
+  <!-- ============ SEARCH ============ -->
+  <section class="page" id="page-search">
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" type="search" inputmode="search" autocomplete="off" autocapitalize="off" spellcheck="false"
+               placeholder="Type a salt or brand… e.g. “amox”, “clav”, “para”" aria-label="Search medicines">
+        <button id="clearSearch" class="icon-btn hidden" aria-label="clear">✕</button>
+      </div>
+      <div id="suggest" class="suggest hidden" role="listbox"></div>
+    </div>
+
+    <div id="searchMeta" class="meta-line"></div>
+    <div id="searchResults"></div>
+
+    <div id="homeEmpty" class="empty-state">
+      <div class="big-pulse">💊</div>
+      <h2>1,600+ stock medicines, searchable by anything</h2>
+      <p>Type <b>any part of a salt</b> (“amox”, “metform”) <br>or <b>any part of a brand</b> (“zerodol”, “brufen”).</p>
+      <div class="quick-chips" id="quickChips"></div>
+    </div>
+  </section>
+
+  <!-- ============ SALTS ============ -->
+  <section class="page hidden" id="page-salts">
+    <div class="section-head">
+      <h2>Salt browser</h2>
+      <input id="saltFilter" type="search" placeholder="filter salts…" aria-label="filter salts">
+    </div>
+    <div id="saltList" class="salt-list"></div>
+  </section>
+
+  <!-- ============ PLAY ============ -->
+  <section class="page hidden" id="page-play">
+    <div id="playHome">
+      <div class="hero-card">
+        <h2>🎯 The Brand ↔ Salt Challenge</h2>
+        <p class="dim">Only one option matches — every time. Forged from your own stock file.</p>
+
+        <div class="choice-block">
+          <div class="choice-label">Game mode</div>
+          <div class="seg" id="modeSeg">
+            <button data-v="brand2ing" class="on">💊 Brand → Salts</button>
+            <button data-v="ing2brand">🧂 Salts → Brand</button>
+          </div>
+        </div>
+
+        <div class="choice-grid">
+          <div class="choice-block">
+            <div class="choice-label">Questions</div>
+            <select id="cfgCount"><option>5</option><option selected>10</option><option>15</option><option>20</option></select>
+          </div>
+          <div class="choice-block">
+            <div class="choice-label">Options</div>
+            <select id="cfgOpts"><option>3</option><option selected>4</option><option>5</option></select>
+          </div>
+          <div class="choice-block">
+            <div class="choice-label">Timer</div>
+            <select id="cfgTimer"><option value="0">off</option><option value="10">10s</option><option value="20" selected>20s</option><option value="30">30s</option></select>
+          </div>
+          <div class="choice-block">
+            <div class="choice-label">Lifelines</div>
+            <div class="lifeline-view">2 × <b>50:50</b></div>
+          </div>
+        </div>
+
+        <button class="btn primary big" id="startGame">▶ &nbsp;Start round</button>
+        <div class="best-line" id="bestLine"></div>
+      </div>
+    </div>
+
+    <div id="playBoard" class="hidden">
+      <div class="board-top">
+        <div class="prog"><i id="progBar"></i></div>
+        <div class="board-stats">
+          <span id="qNum">Q 1/10</span>
+          <span id="streakTag" class="streak hidden">🔥 <b id="streakN">0</b></span>
+          <span id="scoreTag">★ <b id="scoreN">0</b></span>
+          <span id="timerTag" class="timer hidden">⏱ <b id="timerN">20</b></span>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <div class="q-kind" id="qKind"></div>
+        <div class="q-prompt" id="qPrompt"></div>
+        <div class="q-sub" id="qSub"></div>
+      </div>
+
+      <div class="options" id="optWrap"></div>
+
+      <div class="board-actions">
+        <button class="btn ghost" id="fiftyBtn">✂ 50:50 (<b id="fiftyN">2</b>)</button>
+        <button class="btn ghost" id="quitBtn">🏳 quit</button>
+      </div>
+    </div>
+
+    <div id="playEnd" class="hidden">
+      <div class="end-card">
+        <div id="endEmoji">🏆</div>
+        <h2 id="endTitle">Round over!</h2>
+        <div class="end-score" id="endScore">0</div>
+        <div class="end-grid" id="endGrid"></div>
+        <div class="newbest hidden" id="newBest">🎉 New personal best!</div>
+        <div class="row center">
+          <button class="btn primary" id="againBtn">🔁 Play again</button>
+          <button class="btn ghost" id="shareBtn">📣 Share score</button>
+        </div>
+        <div class="review-list" id="reviewList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MORE ============ -->
+  <section class="page hidden" id="page-more">
+    <div class="hero-card slim">
+      <h2>🏆 Your stats</h2>
+      <div class="stat-grid" id="statGrid"></div>
+    </div>
+    <div class="hero-card slim">
+      <h2>ℹ️ About &amp; data</h2>
+      <p class="dim" id="aboutLine"></p>
+      <details class="details">
+        <summary>Medicines skipped (composition unverifiable)</summary>
+        <div id="skipList"></div>
+      </details>
+      <details class="details">
+        <summary>Why can I trust this?</summary>
+        <p class="dim">Ingredient blanks in the stock file were filled only when a reliable source (1mg, PharmEasy, Apollo, manufacturer pages…) clearly matched that exact brand. Brands nobody could verify were dropped from the game, not guessed.</p>
+      </details>
+      <details class="details">
+        <summary>How to install as an app</summary>
+        <p class="dim">On your Android: open this app in Chrome → menu ⋮ → <b>Add to Home screen</b> → Install. It then opens fullscreen, portrait, works offline.</p>
+      </details>
+      <div class="row">
+        <button class="btn ghost" id="installBtn">⬇️ Install app</button>
+        <button class="btn ghost" id="soundBtn">🔊 Sound: on</button>
+        <button class="btn ghost danger" id="resetBtn">🗑 reset stats</button>
+      </div>
+    </div>
+    <div class="foot-note">Built for the shop stock file · 1690 items · ingredients verified where possible</div>
+  </section>
+
+  <!-- bottom nav -->
+  <nav class="bottom-nav">
+    <button class="nav-btn on" data-page="search"><span>🔍</span>Search</button>
+    <button class="nav-btn" data-page="salts"><span>🧂</span>Salts</button>
+    <button class="nav-btn" data-page="play"><span>🎮</span>Play</button>
+    <button class="nav-btn" data-page="more"><span>⭐</span>More</button>
+  </nav>
+</main>
+
+<!-- ===== overlay stack (all minimizable!) ===== -->
+<div id="overlayBack" class="hidden"></div>
+<div id="overlayStack"></div>
+<div id="miniDock" class="hidden"></div>
+<div id="toast" class="hidden"></div>
+<canvas id="confetti"></canvas>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

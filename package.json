@@ -1,0 +1,15 @@
+{
+  "name": "mediquiz",
+  "version": "1.0.0",
+  "description": "Pharmacy medicine search + brand-vs-salt MCQ game (PWA)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build:data": "python3 scripts/build_dataset.py"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "compression": "^1.7.5",
+    "express": "^4.21.2"
+  }
+}
