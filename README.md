@@ -1,5 +1,9 @@
 # 💊 MediQuiz — Brand ↔ Salt Finder & MCQ Game
 
+> **⬇️ Direct download (no install, no server):**
+> **[MediQuiz.html — the entire app in ONE file, 1.5 MB](https://github.com/jojokundesu/Mcq-game/raw/arena/01a0e15c-mcq-game/dist/MediQuiz.html)**
+> Download → open in Chrome → done. Works offline. Release page: **[v1.0.0](https://github.com/jojokundesu/Mcq-game/releases/tag/v1.0.0)**
+
 A pharmacy app built from the shop's real stock file
 (**1,690 items**, 1,421 playable medicines, 714 unique ingredient sets):
 
