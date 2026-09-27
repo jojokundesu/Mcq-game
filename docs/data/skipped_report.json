@@ -1,0 +1,556 @@
+{
+ "total_raw": 1789,
+ "filled": 93,
+ "reclassified": 26,
+ "duplicates_removed": 8,
+ "final": 1690,
+ "skipped_count": 91,
+ "skipped": [
+  {
+   "name": "CEDOCLAVE - CV",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "4.  Antibiotics & Antibacterials"
+  },
+  {
+   "name": "CEFRABI - IT",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "4.  Antibiotics & Antibacterials"
+  },
+  {
+   "name": "DILUSTONE 1B6 ORAL",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "12.  Urology & Kidney"
+  },
+  {
+   "name": "NUMUCO TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "TUSSTON SUPER",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ZUPITUSS - LF SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "VOMDY SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "4-TEL-40",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "4-TEL-AM",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "4TEL BETA 25",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "9-FM TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ACTIROM 1 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ACTIROM 2 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ACTIROM 3 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "AFFORARNI 50",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ALKEMCORT INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "AMMY MAXXI XL",
+   "formulation": "—",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ASCOAIR BL 100 ML",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ATRODOT INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "BACTIPEX - C 10*10",
+   "formulation": "Tablet strip",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "BACTIPEX - C 10*30",
+   "formulation": "Tablet strip",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "BOLDINE 500 ML",
+   "formulation": "IV infusion",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "BRIVAZIN 50 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "BRIVAZOY 50 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "CARIFOD TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "COMING - 250",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "COMING -500",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "COMING PRO",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "DIGIFINE SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "EDOFUR INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ENZOCORT 40 INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ENZOVENT PLUS",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "FEVAH - BG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "FIXOLIN -M",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "FLOPRESS - DF",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "FLUTILERT - AZ",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "FOLITITRAX 7.5 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "GENCIPHAL CT SYP",
+   "formulation": "Syrup (oral)",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "HEART LONG 2.6",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "INRAFT SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "JOITEN TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "LEVOSURF INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "LITAX- PLUS SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "LOPRAKEM TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MACRAFLATE - O",
+   "formulation": "Sachet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MAGGIE - 360",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MAXAGLIP AT",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MEDLAR",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "METACARB  INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MICRONASE - AF",
+   "formulation": "Cream",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MULTIJECT INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MULTIREGAIN  -R",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MUVIT INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "MYLABIOIN PLUS",
+   "formulation": "Suspension",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NEXTIO 10 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NEXTIO 15 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NEXTIO 5 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NEXTIO PLUS",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NIMUMIC PLUS GOLDE",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "NUROLEX TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "OMNATOX - O 200",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "OXEREL SYP",
+   "formulation": "Syrup",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "PARIMIST - 500",
+   "formulation": "IV infusion",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "PHYLOBRON 200 MG",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "PREBGENE - M",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "PROPIBET - 20",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "QUCINAC  AB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "QUCINAC - AB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "QUCINAC 600",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "RESTBRO D",
+   "formulation": "Capsule",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ROSVAPAN - 20",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ROSWOW CV - 20",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SACUMUST - 50 TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SAFLIN - S 1500",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SICAIN O SUP",
+   "formulation": "Suppository",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SICAIN O SUPP",
+   "formulation": "Suppository",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SINRV - OK SACHET",
+   "formulation": "Sachet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SINRV OK SACHET",
+   "formulation": "Sachet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SINRV-FOL TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "SUPERDYN",
+   "formulation": "Capsule",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "TENDOMIC 4 D TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "THIAFIT -100",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "TIXOCOM TAB",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "TRABIS - 500",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "TRIZACT",
+   "formulation": "Syrup (oral)",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "VILORESP U PULMICAPS",
+   "formulation": "Pulmicaps",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "VPN-20",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "WINEPH  SPRAY",
+   "formulation": "Spray",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "XYLONORM INJ",
+   "formulation": "Injection",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ZETAZEL SUSP",
+   "formulation": "Suspension",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  },
+  {
+   "name": "ZIVADOX - 200",
+   "formulation": "Tablet",
+   "strength": "—",
+   "category": "16.  Other / Unclassified Medicines"
+  }
+ ]
+}
