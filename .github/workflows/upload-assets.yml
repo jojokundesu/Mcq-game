@@ -1,6 +1,8 @@
 name: upload-release-assets
 on:
-  workflow_dispatch:
+  push:
+    branches: [arena/01a0e15c-mcq-game]
+    paths: [dist/.trigger]
 
 jobs:
   upload:
