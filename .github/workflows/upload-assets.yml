@@ -1,0 +1,24 @@
+name: upload-release-assets
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: arena/01a0e15c-mcq-game
+      - name: Upload assets to release v1.0.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          ls -la dist/
+          gh release upload v1.0.0 \
+            dist/MediQuiz.html \
+            dist/mediquiz-standalone.zip \
+            dist/mediquiz-app.tar.gz \
+            --repo jojokundesu/Mcq-game --clobber
