@@ -8,11 +8,11 @@ Built from the shop stock file: **1,690 items · 1,421 playable medicines · 714
 
 | Link | What | How to use |
 |---|---|---|
-| **📱 [MediQuiz.html — the whole app in ONE file](https://github.com/jojokundesu/Mcq-game/raw/arena/01a0e15c-mcq-game/dist/MediQuiz.html)** (1.5 MB) | ⭐ Recommended | Download to your phone → open with **Chrome**. Runs instantly, works offline. Chrome ⋮ → *Add to Home screen* for a real app icon. |
-| **🗜 [Full source (ZIP)](https://github.com/jojokundesu/Mcq-game/archive/refs/tags/v1.0.0.zip)** | Node.js server + frontend | Unzip → `npm install && npm start` → http://localhost:8080 |
-| **🗜 [Full source (tar.gz)](https://github.com/jojokundesu/Mcq-game/archive/refs/tags/v1.0.0.tar.gz)** | same | same |
+| **🎮 [OPEN THE APP NOW](https://cdn.jsdelivr.net/gh/jojokundesu/Mcq-game@v1.0.1/dist/MediQuiz.html)** (runs instantly) | ⭐ **Recommended** | Tap → the app **opens right in your browser**. Then Chrome **⋮ → Add to Home screen → Install** for an app icon. |
+| **📥 [Download to keep forever (ZIP, 500 KB)](https://github.com/jojokundesu/Mcq-game/raw/arena/01a0e15c-mcq-game/dist/mediquiz-standalone.zip)** | Offline copy | Tap → **the ZIP downloads** → tap it in Downloads → **Extract** → open `MediQuiz.html` with Chrome. |
+| **🗜 [Full source (ZIP)](https://github.com/jojokundesu/Mcq-game/archive/refs/tags/v1.0.0.zip)** | Node.js server + frontend | For a PC: unzip → `npm install && npm start` → http://localhost:8080 |
 
-> Android tip (Realme 9i): in Chrome, long-press the **MediQuiz.html** link above → **Download link**. Then open the downloaded file — or find it in Files → Downloads.
+> ⚠️ Don't tap "raw/MediQuiz.html" links on GitHub — those show the app's *code* as text. The ZIP above downloads properly; the 🎮 "OPEN" link runs the app instantly.
 
 ---
 
