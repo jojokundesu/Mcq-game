@@ -1,9 +1,9 @@
 # 💊 MediQuiz — Brand ↔ Salt Finder & MCQ Game
 
-> **🎮 [OPEN THE APP NOW](https://cdn.jsdelivr.net/gh/jojokundesu/Mcq-game@0969f483418159e10c868b23686cefae663f44fc/dist/MediQuiz.html)** — tap & it runs immediately in the browser.
+> **🎮 [OPEN THE APP NOW](https://github.com/jojokundesu/Mcq-game/releases/download/v1.0.0/MediQuiz.html)** — tap & it runs immediately in the browser.
 > Then Chrome **⋮ → Add to Home screen → Install** for a real app icon (fullscreen, portrait, offline).
 >
-> 📥 Or [download the ZIP](https://github.com/jojokundesu/Mcq-game/raw/arena/01a0e15c-mcq-game/dist/mediquiz-standalone.zip) to keep the app forever — release page: **[v1.0.0](https://github.com/jojokundesu/Mcq-game/releases/tag/v1.0.0)**
+> 📥 Or [download the ZIP](https://github.com/jojokundesu/Mcq-game/releases/download/v1.0.0/mediquiz-standalone.zip) to keep the app forever — release page: **[v1.0.0](https://github.com/jojokundesu/Mcq-game/releases/tag/v1.0.0)**
 
 A pharmacy app built from the shop's real stock file
 (**1,690 items**, 1,421 playable medicines, 714 unique ingredient sets):
