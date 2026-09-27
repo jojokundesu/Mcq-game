@@ -1,15 +1,15 @@
 /* MediQuiz service worker — offline-first. */
-const CACHE = 'mediquiz-v1';
+const CACHE = 'mediquiz-v2';
 const CORE = [
-  '/',
-  '/index.html',
-  '/css/app.css',
-  '/js/app.js',
-  '/manifest.webmanifest',
-  '/data/medicines.json',
-  '/data/skipped_report.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  './',
+  'index.html',
+  'css/app.css',
+  'js/app.js',
+  'manifest.webmanifest',
+  'data/medicines.json',
+  'data/skipped_report.json',
+  'icons/icon-192.png',
+  'icons/icon-512.png'
 ];
 
 self.addEventListener('install', e => {
@@ -28,7 +28,7 @@ self.addEventListener('fetch', e => {
   if (url.pathname.startsWith('/api/')) return;
 
   // data: network-first, fall back to cache (fresh catalog when online)
-  if (url.pathname.startsWith('/data/')) {
+  if (url.pathname.includes('/data/')) {
     e.respondWith(
       fetch(e.request).then(r => {
         const copy = r.clone();
@@ -45,7 +45,7 @@ self.addEventListener('fetch', e => {
       fetch(e.request).then(r => {
         if (r.ok) { const copy = r.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
         return r;
-      }).catch(() => e.request.mode === 'navigate' ? caches.match('/index.html') : Response.error())
+      }).catch(() => e.request.mode === 'navigate' ? caches.match('index.html') : Response.error())
     )
   );
 });

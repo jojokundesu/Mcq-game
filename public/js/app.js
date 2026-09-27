@@ -147,11 +147,12 @@ function searchLocal(q) {
 
 /* ============================ boot ============================ */
 async function boot() {
-  let items = null;
+  // standalone single-file builds embed the catalog; otherwise fetch relative
+  let items = window.MQ_EMBED_DATA || null;
   for (const attempt of ['fetch', 'fetch-cache']) {
     if (items) break;
     try {
-      const r = await fetch('/data/medicines.json', attempt === 'fetch-cache' ? { cache: 'force-cache' } : {});
+      const r = await fetch('data/medicines.json', attempt === 'fetch-cache' ? { cache: 'force-cache' } : {});
       if (r.ok) items = await r.json();
     } catch (e) {}
   }
@@ -590,7 +591,7 @@ function renderStats() {
 }
 async function fillAbout() {
   try {
-    const r = await (await fetch('/data/skipped_report.json')).json();
+    const r = window.MQ_EMBED_SKIP || await (await fetch('data/skipped_report.json')).json();
     $('#skipList').innerHTML = `<p class="dim">${r.skipped_count} of ${r.total_raw} stock rows were skipped — no reliable source confirmed their composition. All pop-ups & learnings stay accurate because of that.</p>
       <ul>${r.skipped.map(x => `<li>${esc(x.name)}${x.formulation && x.formulation !== '—' ? ` <i>(${esc(x.formulation)})</i>` : ''}</li>`).join('')}</ul>`;
   } catch (e) { $('#skipList').textContent = 'Report unavailable offline.'; }
@@ -656,7 +657,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && Overlays.t
 
 /* ============================ service worker ============================ */
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
 
 setOnline(); checkRotate();

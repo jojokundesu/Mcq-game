@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════════════════════════╗
+║  MediQuiz — how to use your download (pick ONE)              ║
+╚══════════════════════════════════════════════════════════════╝
+
+★ EASIEST — on your Realme 9i (or any phone/PC):
+  1. Send MediQuiz.html to the phone (WhatsApp/Drive/USB).
+  2. Open it with Chrome. Done — it runs fully offline already.
+     (Optional: Chrome ⋮ → “Add to Home screen” for an app icon.)
+
+★ FULL app with live server API (needs Node.js):
+  1. Unzip mediquiz-app.zip.
+  2. npm install && npm start
+  3. Open http://localhost:8080 — install as PWA.
+
+★ APK wrapper (optional, uses free pwabuilder.com):
+  Host the public/ + data/ folders anywhere with HTTPS, feed the
+  URL to pwabuilder.com → “Package for Android” → APK download.
+
+Enjoy! 💊🎯
